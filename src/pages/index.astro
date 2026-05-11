@@ -1,17 +1,406 @@
 ---
-
+import "../styles/global.css";
 ---
 
-<html lang="en">
+<html lang="th">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>รับทำเว็บไซต์ | CHENRUCHI WEB</title>
+
+		<meta
+			name="description"
+			content="รับทำเว็บไซต์ Landing Page และเว็บไซต์ธุรกิจ ราคาเริ่มต้น 900 บาท รองรับมือถือ โหลดเร็ว ด้วย Astro JS และ TailwindCSS"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body>
-		<h1>Astro</h1>
+
+	<body class="bg-black text-white font-[Noto_Sans_Thai]">
+		<!-- NAVBAR -->
+		<header
+			class="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl"
+		>
+			<div
+				class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+			>
+				<a href="#" class="text-2xl font-black tracking-wide">
+					CHENRUCHI<span class="text-cyan-400">WEB</span>
+				</a>
+
+				<nav
+					class="hidden md:flex items-center gap-8 text-sm text-gray-300"
+				>
+					<a href="#services" class="hover:text-cyan-400 transition">
+						บริการ
+					</a>
+
+					<a href="#portfolio" class="hover:text-cyan-400 transition">
+						ผลงาน
+					</a>
+
+					<a href="#pricing" class="hover:text-cyan-400 transition">
+						ราคา
+					</a>
+
+					<a href="#contact" class="hover:text-cyan-400 transition">
+						ติดต่อ
+					</a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- HERO -->
+		<section
+			class="relative min-h-screen flex items-center overflow-hidden"
+		>
+			<!-- BG -->
+			<div class="absolute inset-0">
+				<img
+					src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1800&auto=format&fit=crop"
+					alt="Developer"
+					class="w-full h-full object-cover opacity-20"
+				/>
+
+				<div
+					class="absolute inset-0 bg-gradient-to-b from-black/40 to-black"
+				>
+				</div>
+			</div>
+
+			<!-- CONTENT -->
+			<div class="relative max-w-7xl mx-auto px-6 py-32">
+				<div class="max-w-3xl">
+					<div
+						class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-sm mb-8"
+					>
+						🚀 รับทำเว็บไซต์ธุรกิจ & Landing Page
+					</div>
+
+					<h1
+						class="text-5xl md:text-7xl font-black leading-tight mb-8"
+					>
+						รับทำเว็บไซต์<br />
+
+						<span class="text-cyan-400"> ราคาเริ่มต้น 900 บาท</span>
+					</h1>
+
+					<p class="text-xl text-gray-300 leading-relaxed mb-10">
+						เว็บไซต์สำหรับร้านค้า คาเฟ่ บริษัท และธุรกิจขนาดเล็ก
+						โหลดเร็ว รองรับมือถือ ดีไซน์ทันสมัย พร้อม Deploy
+						ออนไลน์ให้ใช้งานได้ทันที
+					</p>
+
+					<div class="flex flex-wrap gap-4">
+						<a
+							href="#contact"
+							class="px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-black font-bold rounded-2xl transition"
+						>
+							ติดต่อสอบถาม
+						</a>
+
+						<a
+							href="#portfolio"
+							class="px-8 py-4 border border-white/20 hover:border-cyan-400 rounded-2xl transition"
+						>
+							ดูผลงาน
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SERVICES -->
+		<section id="services" class="py-28 border-t border-white/10">
+			<div class="max-w-7xl mx-auto px-6">
+				<div class="text-center mb-20">
+					<p class="text-cyan-400 font-semibold mb-4">SERVICES</p>
+
+					<h2 class="text-4xl md:text-5xl font-black mb-6">
+						บริการของเรา
+					</h2>
+
+					<p class="text-gray-400 max-w-2xl mx-auto">
+						รับทำเว็บไซต์สำหรับธุรกิจทุกประเภท เน้นดีไซน์สวย
+						โหลดเร็ว และใช้งานง่าย
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- CARD -->
+					<div
+						class="group bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:border-cyan-400 transition"
+					>
+						<div class="text-5xl mb-6">☕</div>
+
+						<h3 class="text-2xl font-bold mb-4">ร้านค้า & คาเฟ่</h3>
+
+						<p class="text-gray-400 leading-relaxed">
+							เว็บไซต์ร้านกาแฟ ร้านอาหาร และร้านค้าออนไลน์
+							พร้อมปุ่ม Line และ Facebook
+						</p>
+					</div>
+
+					<!-- CARD -->
+					<div
+						class="group bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:border-cyan-400 transition"
+					>
+						<div class="text-5xl mb-6">🏭</div>
+
+						<h3 class="text-2xl font-bold mb-4">บริษัท & โรงงาน</h3>
+
+						<p class="text-gray-400 leading-relaxed">
+							เว็บไซต์องค์กร เพิ่มความน่าเชื่อถือ
+							รองรับการแสดงข้อมูลบริการและสินค้า
+						</p>
+					</div>
+
+					<!-- CARD -->
+					<div
+						class="group bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:border-cyan-400 transition"
+					>
+						<div class="text-5xl mb-6">🚀</div>
+
+						<h3 class="text-2xl font-bold mb-4">Landing Page</h3>
+
+						<p class="text-gray-400 leading-relaxed">
+							หน้าโปรโมชั่นและเว็บไซต์สำหรับยิง Ads โหลดเร็ว
+							รองรับมือถือเต็มรูปแบบ
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PORTFOLIO -->
+		<section id="portfolio" class="py-28 bg-white/[0.02]">
+			<div class="max-w-7xl mx-auto px-6">
+				<div class="mb-20">
+					<p class="text-cyan-400 font-semibold mb-4">PORTFOLIO</p>
+
+					<h2 class="text-4xl md:text-5xl font-black mb-6">
+						ตัวอย่างผลงาน
+					</h2>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- ITEM -->
+					<div
+						class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]"
+					>
+						<div class="overflow-hidden">
+							<img
+								src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+								class="h-72 w-full object-cover group-hover:scale-105 transition duration-500"
+								alt="Coffee Website"
+							/>
+						</div>
+
+						<div class="p-6">
+							<h3 class="text-2xl font-bold mb-3">
+								เว็บไซต์ร้านกาแฟ
+							</h3>
+
+							<p class="text-gray-400 mb-6">
+								ดีไซน์มินิมอล รองรับมือถือ โหลดเร็ว
+							</p>
+
+							<a
+								href="#"
+								class="text-cyan-400 hover:text-cyan-300"
+							>
+								ดูตัวอย่าง →
+							</a>
+						</div>
+					</div>
+
+					<!-- ITEM -->
+					<div
+						class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]"
+					>
+						<div class="overflow-hidden">
+							<img
+								src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1200&auto=format&fit=crop"
+								class="h-72 w-full object-cover group-hover:scale-105 transition duration-500"
+								alt="Factory Website"
+							/>
+						</div>
+
+						<div class="p-6">
+							<h3 class="text-2xl font-bold mb-3">
+								เว็บไซต์โรงงาน
+							</h3>
+
+							<p class="text-gray-400 mb-6">
+								เว็บไซต์บริษัท เพิ่มความน่าเชื่อถือ
+							</p>
+
+							<a
+								href="#"
+								class="text-cyan-400 hover:text-cyan-300"
+							>
+								ดูตัวอย่าง →
+							</a>
+						</div>
+					</div>
+
+					<!-- ITEM -->
+					<div
+						class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]"
+					>
+						<div class="overflow-hidden">
+							<img
+								src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+								class="h-72 w-full object-cover group-hover:scale-105 transition duration-500"
+								alt="Landing Page"
+							/>
+						</div>
+
+						<div class="p-6">
+							<h3 class="text-2xl font-bold mb-3">
+								Landing Page
+							</h3>
+
+							<p class="text-gray-400 mb-6">
+								หน้าโปรโมชั่นและหน้าโฆษณา
+							</p>
+
+							<a
+								href="#"
+								class="text-cyan-400 hover:text-cyan-300"
+							>
+								ดูตัวอย่าง →
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PRICING -->
+		<section id="pricing" class="py-28">
+			<div class="max-w-7xl mx-auto px-6">
+				<div class="text-center mb-20">
+					<p class="text-cyan-400 font-semibold mb-4">PRICING</p>
+
+					<h2 class="text-4xl md:text-5xl font-black mb-6">
+						ราคาเริ่มต้น
+					</h2>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- CARD -->
+					<div
+						class="rounded-3xl border border-white/10 bg-white/[0.03] p-8"
+					>
+						<h3 class="text-3xl font-bold mb-4">Starter</h3>
+
+						<div class="text-5xl font-black text-cyan-400 mb-8">
+							900฿
+						</div>
+
+						<ul class="space-y-4 text-gray-300 mb-10">
+							<li>✓ เว็บไซต์ 1 หน้า</li>
+							<li>✓ รองรับมือถือ</li>
+							<li>✓ ปุ่ม Line / Facebook</li>
+							<li>✓ Google Map</li>
+						</ul>
+
+						<button
+							class="w-full py-4 rounded-2xl bg-cyan-400 text-black font-bold hover:bg-cyan-300 transition"
+						>
+							เริ่มต้น
+						</button>
+					</div>
+
+					<!-- CARD -->
+					<div
+						class="rounded-3xl bg-cyan-400 text-black p-8 scale-105"
+					>
+						<h3 class="text-3xl font-bold mb-4">Business</h3>
+
+						<div class="text-5xl font-black mb-8">1,500฿</div>
+
+						<ul class="space-y-4 mb-10">
+							<li>✓ เพิ่มหน้า About</li>
+							<li>✓ SEO เบื้องต้น</li>
+							<li>✓ ฟอร์มติดต่อ</li>
+							<li>✓ แก้ไขฟรี 2 รอบ</li>
+						</ul>
+
+						<button
+							class="w-full py-4 rounded-2xl bg-black text-white font-bold hover:bg-gray-900 transition"
+						>
+							แนะนำ
+						</button>
+					</div>
+
+					<!-- CARD -->
+					<div
+						class="rounded-3xl border border-white/10 bg-white/[0.03] p-8"
+					>
+						<h3 class="text-3xl font-bold mb-4">Premium</h3>
+
+						<div class="text-5xl font-black text-cyan-400 mb-8">
+							3,000฿
+						</div>
+
+						<ul class="space-y-4 text-gray-300 mb-10">
+							<li>✓ หลายหน้า</li>
+							<li>✓ ดีไซน์พิเศษ</li>
+							<li>✓ Deploy เว็บไซต์</li>
+							<li>✓ SEO เพิ่มเติม</li>
+						</ul>
+
+						<button
+							class="w-full py-4 rounded-2xl bg-cyan-400 text-black font-bold hover:bg-cyan-300 transition"
+						>
+							สอบถาม
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<section id="contact" class="py-32 border-t border-white/10">
+			<div class="max-w-4xl mx-auto px-6 text-center">
+				<h2 class="text-5xl md:text-6xl font-black mb-8">
+					สนใจทำเว็บไซต์?
+				</h2>
+
+				<p class="text-gray-400 text-xl mb-12">
+					ส่งรายละเอียดธุรกิจมาได้เลยครับ 😊
+				</p>
+
+				<div class="flex flex-wrap justify-center gap-4">
+					<a
+						href="#"
+						class="px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-black font-bold rounded-2xl transition"
+					>
+						LINE
+					</a>
+
+					<a
+						href="#"
+						class="px-8 py-4 border border-white/20 hover:border-cyan-400 rounded-2xl transition"
+					>
+						Facebook
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer
+			class="border-t border-white/10 py-8 text-center text-gray-500 text-sm"
+		>
+			© 2026 CHENRUCHI WEB — All Rights Reserved
+		</footer>
 	</body>
 </html>
